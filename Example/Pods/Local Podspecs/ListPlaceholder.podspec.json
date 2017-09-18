@@ -1,0 +1,22 @@
+{
+  "name": "ListPlaceholder",
+  "version": "0.1.0",
+  "summary": "A short description of ListPlaceholder.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/moayad_kouz9@hotmail.com/ListPlaceholder",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "moayad_kouz9@hotmail.com": "malkouz@dopravo.com"
+  },
+  "source": {
+    "git": "https://github.com/moayad_kouz9@hotmail.com/ListPlaceholder.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ListPlaceholder/Classes/**/*"
+}
