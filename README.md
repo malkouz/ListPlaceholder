@@ -42,18 +42,15 @@ Simply download the `ListLoader.swift` file from [here](https://github.com/malko
 
 ```swift
 import ListPlaceholder
-}
 ```
 To show the loader
 ```swift
 tableView.showLoader()
-}
 ```
 
 To hide the loader
 ```swift
 tableView.hideLoader()
-}
 ```
 
 ## Example project
