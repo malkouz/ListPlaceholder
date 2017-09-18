@@ -10,7 +10,7 @@
 
 import UIKit
 import ListPlaceholder
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         self.tableView.showLoader()
         
-        Timer.scheduledTimer(timeInterval: 50.0, target: self, selector: #selector(ViewController.removeLoader), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(TableViewController.removeLoader), userInfo: nil, repeats: false)
     }
     
     

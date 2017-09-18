@@ -43,14 +43,25 @@ Simply download the `ListLoader.swift` file from [here](https://github.com/malko
 ```swift
 import ListPlaceholder
 ```
-To show the loader
+TableView usage
 ```swift
+//to show the loader
+tableView.reloadData()
 tableView.showLoader()
+
+//to hide the loader
+tableView.hideLoader()
 ```
 
-To hide the loader
+CollectionView usage
 ```swift
-tableView.hideLoader()
+//to show the loader
+collectionView.reloadData()
+collectionView.layoutIfNeeded()
+collectionView.showLoader()
+
+//to hide the loader
+collectionView.hideLoader()
 ```
 
 ## Example project
