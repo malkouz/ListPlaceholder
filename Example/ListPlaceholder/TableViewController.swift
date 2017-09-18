@@ -16,6 +16,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "UITableView Sample"
         tableView.reloadData()
         
         self.tableView.showLoader()

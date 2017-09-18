@@ -14,12 +14,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        self.title = "UICollectionView Sample"
         
         collectionView.reloadData()
         collectionView.layoutIfNeeded()
@@ -27,7 +22,9 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
         self.collectionView.showLoader()
         
         Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(CollectionViewController.removeLoader), userInfo: nil, repeats: false)
+        // Do any additional setup after loading the view.
     }
+    
 
     @objc func removeLoader()
     {
