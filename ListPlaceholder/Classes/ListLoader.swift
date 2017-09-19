@@ -41,8 +41,7 @@ extension UICollectionView : ListLoadable
 {
     public func ld_visibleContentViews()->[UIView]
     {
-//        let sss = (self.visibleCells as NSArray).value(forKey: "contentView") as! [UIView]
-        return self.visibleCells
+        return (self.visibleCells as NSArray).value(forKey: "contentView") as! [UIView]
     }
 }
 
