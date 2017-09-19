@@ -1,0 +1,16 @@
+PODS:
+  - ListPlaceholder (1.0)
+
+DEPENDENCIES:
+  - ListPlaceholder (from `../`)
+
+EXTERNAL SOURCES:
+  ListPlaceholder:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ListPlaceholder: 321e25c961123c0f7ec4b47b6197a3771af88a66
+
+PODFILE CHECKSUM: d0e6fedcf5d528599c4461d73cb7dd2ed9a6ad1a
+
+COCOAPODS: 1.3.1

@@ -1,0 +1,6 @@
+framework module ListPlaceholder {
+  umbrella header "ListPlaceholder-umbrella.h"
+
+  export *
+  module * { export * }
+}
