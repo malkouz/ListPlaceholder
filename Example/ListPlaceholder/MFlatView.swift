@@ -1,10 +1,4 @@
-//
-//  MFlatView.swift
-//  SalesV2
-//
-//  Created by Moayad Al kouz on 11/1/16.
-//  Copyright © 2016 Thiqah. All rights reserved.
-//
+
 
 import UIKit
 @IBDesignable
