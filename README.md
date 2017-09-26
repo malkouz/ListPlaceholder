@@ -13,7 +13,7 @@
 
 
 ## Features
-ListPlaceholder is a swift library allows you to easily add facebook style animated loading placeholder to your tableviews or collection views.
+ListPlaceholder is a swift library allows you to easily add facebook style animated loading placeholder to your tableviews, collection views or custom views.
 
 ## Installation
 
@@ -43,7 +43,7 @@ Simply download the `ListLoader.swift` file from [here](https://github.com/malko
 ```swift
 import ListPlaceholder
 ```
-TableView usage
+UITableView usage
 ```swift
 //to show the loader
 tableView.reloadData()
@@ -53,7 +53,7 @@ tableView.showLoader()
 tableView.hideLoader()
 ```
 
-CollectionView usage
+UICollectionView usage
 ```swift
 //to show the loader
 collectionView.reloadData()
@@ -62,6 +62,16 @@ collectionView.showLoader()
 
 //to hide the loader
 collectionView.hideLoader()
+```
+
+UIView usage
+```swift
+//to show the loader
+
+customView.showLoader()
+
+//to hide the loader
+customView.hideLoader()
 ```
 
 ## Example project

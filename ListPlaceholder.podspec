@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ListPlaceholder'
-  s.version          = '1.0'
-  s.summary          = 'facebook news feed style animation on UITableView and UICollectionView.'
+  s.version          = '1.1'
+  s.summary          = 'facebook news feed style animation on UITableView, UICollectionView, and custom views.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-This library allows you to easily add an FB style animated loading placeholder to your tableviews or collection views.
+This library allows you to easily add an FB style animated loading placeholder to your tableviews, collection views, or custom views.
                        DESC
 
   s.homepage         = 'https://github.com/malkouz/ListPlaceholder'

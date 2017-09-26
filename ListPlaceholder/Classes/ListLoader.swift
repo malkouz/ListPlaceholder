@@ -24,18 +24,18 @@ extension UITableView : ListLoadable
     }
 }
 
-extension UITableView
-{
-   public func showLoader(){
-        self.isUserInteractionEnabled = false
-        ListLoader.addLoaderTo(self)
-    }
-    
-    public func hideLoader(){
-        self.isUserInteractionEnabled = true
-        ListLoader.removeLoaderFrom(self)
-    }
-}
+//extension UITableView
+//{
+//   public func showLoader(){
+//        self.isUserInteractionEnabled = false
+//        ListLoader.addLoaderTo(self)
+//    }
+//
+//    public func hideLoader(){
+//        self.isUserInteractionEnabled = true
+//        ListLoader.removeLoaderFrom(self)
+//    }
+//}
 
 extension UICollectionView : ListLoadable
 {
@@ -45,18 +45,44 @@ extension UICollectionView : ListLoadable
     }
 }
 
-extension UICollectionView
+//extension UICollectionView
+//{
+//    public func showLoader(){
+//        self.isUserInteractionEnabled = false
+//        ListLoader.addLoaderTo(self)
+//    }
+//
+//    public func hideLoader(){
+//        self.isUserInteractionEnabled = true
+//        ListLoader.removeLoaderFrom(self)
+//    }
+//}
+
+extension UIView
 {
     public func showLoader(){
         self.isUserInteractionEnabled = false
-        ListLoader.addLoaderTo(self)
+        if self is UITableView{
+            ListLoader.addLoaderTo(self as! UITableView)
+        }else if self is UICollectionView{
+            ListLoader.addLoaderTo(self as! UICollectionView)
+        }else{
+            ListLoader.addLoaderToViews([self])
+        }
     }
     
     public func hideLoader(){
         self.isUserInteractionEnabled = true
-        ListLoader.removeLoaderFrom(self)
+        if self is UITableView{
+            ListLoader.removeLoaderFrom(self as! UITableView)
+        }else if self is UICollectionView{
+            ListLoader.removeLoaderFrom(self as! UICollectionView)
+        }else{
+            ListLoader.removeLoaderFromViews([self])
+        }
     }
 }
+
 
 extension UIColor {
     static func backgroundFadedGrey()->UIColor
