@@ -16,7 +16,7 @@ import UIKit
     func ld_visibleContentViews()->[UIView]
 }
 
-extension UITableView : ListLoadable
+@objc extension UITableView : ListLoadable
 {
     public func ld_visibleContentViews()->[UIView]
     {
@@ -24,41 +24,7 @@ extension UITableView : ListLoadable
     }
 }
 
-//extension UITableView
-//{
-//   public func showLoader(){
-//        self.isUserInteractionEnabled = false
-//        ListLoader.addLoaderTo(self)
-//    }
-//
-//    public func hideLoader(){
-//        self.isUserInteractionEnabled = true
-//        ListLoader.removeLoaderFrom(self)
-//    }
-//}
-
-extension UICollectionView : ListLoadable
-{
-    public func ld_visibleContentViews()->[UIView]
-    {
-        return (self.visibleCells as NSArray).value(forKey: "contentView") as! [UIView]
-    }
-}
-
-//extension UICollectionView
-//{
-//    public func showLoader(){
-//        self.isUserInteractionEnabled = false
-//        ListLoader.addLoaderTo(self)
-//    }
-//
-//    public func hideLoader(){
-//        self.isUserInteractionEnabled = true
-//        ListLoader.removeLoaderFrom(self)
-//    }
-//}
-
-extension UIView
+@objc extension UIView
 {
     public func showLoader(){
         self.isUserInteractionEnabled = false
@@ -83,8 +49,17 @@ extension UIView
     }
 }
 
+@objc extension UICollectionView : ListLoadable
+{
+    public func ld_visibleContentViews()->[UIView]
+    {
+        return (self.visibleCells as NSArray).value(forKey: "contentView") as! [UIView]
+    }
+}
 
-extension UIColor {
+
+
+@objc extension UIColor {
     static func backgroundFadedGrey()->UIColor
     {
         return UIColor(red: (246.0/255.0), green: (247.0/255.0), blue: (248.0/255.0), alpha: 1)
@@ -101,7 +76,7 @@ extension UIColor {
     }
 }
 
-extension UIView{
+@objc extension UIView{
     func boundInside(_ superView: UIView){
         
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -120,7 +95,7 @@ extension CGFloat
 
 
 
-class ListLoader
+@objc open class ListLoader: NSObject
 {
     static func addLoaderToViews(_ views : [UIView])
     {
@@ -148,7 +123,7 @@ class ListLoader
     }
 }
 
-class CutoutView : UIView
+@objc class CutoutView : UIView
 {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
@@ -187,29 +162,29 @@ var gradientFirstStop           = 0.1
 
 
 
-extension UIView
+@objc extension UIView
 {
-    public func ld_getCutoutView()->UIView?
+    fileprivate func ld_getCutoutView()->UIView?
     {
         return objc_getAssociatedObject(self, &cutoutHandle) as! UIView?
     }
     
-    func ld_setCutoutView(_ aView : UIView)
+    fileprivate func ld_setCutoutView(_ aView : UIView)
     {
         return objc_setAssociatedObject(self, &cutoutHandle, aView, .OBJC_ASSOCIATION_RETAIN)
     }
     
-    func ld_getGradient()->CAGradientLayer?
+    fileprivate func ld_getGradient()->CAGradientLayer?
     {
         return objc_getAssociatedObject(self, &gradientHandle) as! CAGradientLayer?
     }
     
-    func ld_setGradient(_ aLayer : CAGradientLayer)
+    fileprivate func ld_setGradient(_ aLayer : CAGradientLayer)
     {
         return objc_setAssociatedObject(self, &gradientHandle, aLayer, .OBJC_ASSOCIATION_RETAIN)
     }
     
-    public func ld_addLoader()
+    fileprivate func ld_addLoader()
     {
         let gradient: CAGradientLayer = CAGradientLayer()
         gradient.frame = CGRect(x: 0, y: 0, width: self.bounds.size.width , height: self.bounds.size.height)
@@ -219,7 +194,7 @@ extension UIView
         self.addCutoutView()
     }
     
-    public func ld_removeLoader()
+    fileprivate func ld_removeLoader()
     {
         self.ld_getCutoutView()?.removeFromSuperview()
         self.ld_getGradient()?.removeAllAnimations()
@@ -263,7 +238,7 @@ extension UIView
         
     }
     
-    func addCutoutView()
+    fileprivate func addCutoutView()
     {
         let cutout = CutoutView()
         cutout.frame = self.bounds
@@ -283,3 +258,4 @@ extension UIView
         self.ld_setCutoutView(cutout)
     }
 }
+
