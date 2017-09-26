@@ -13,6 +13,7 @@ import ListPlaceholder
 class CollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

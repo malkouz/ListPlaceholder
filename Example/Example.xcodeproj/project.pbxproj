@@ -17,6 +17,7 @@
 		70B9E06F7310BBFFAC61005A /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7C762FAF2C684E32067EB9 /* Pods_Example.framework */; };
 		8848F1021F6FDE5B00A83549 /* MFlatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8848F1011F6FDE5B00A83549 /* MFlatView.swift */; };
 		8848F1041F6FF81100A83549 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8848F1031F6FF81100A83549 /* CollectionViewController.swift */; };
+		8857903E1F7A45EB00A0B817 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857903D1F7A45EB00A0B817 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		7994F826A8F7C85ACC8D4D29 /* Pods_Example_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8848F1011F6FDE5B00A83549 /* MFlatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFlatView.swift; sourceTree = "<group>"; };
 		8848F1031F6FF81100A83549 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		8857903D1F7A45EB00A0B817 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AD20C860D5B2082F229C3472 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DA7C762FAF2C684E32067EB9 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E261DBDF07158F22DDE97A22 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			children = (
 				8848F1011F6FDE5B00A83549 /* MFlatView.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				8857903D1F7A45EB00A0B817 /* ViewController.swift */,
 				8848F1031F6FF81100A83549 /* CollectionViewController.swift */,
 				607FACD71AFB9204008FA782 /* TableViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -376,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8857903E1F7A45EB00A0B817 /* ViewController.swift in Sources */,
 				8848F1041F6FF81100A83549 /* CollectionViewController.swift in Sources */,
 				8848F1021F6FDE5B00A83549 /* MFlatView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* TableViewController.swift in Sources */,
