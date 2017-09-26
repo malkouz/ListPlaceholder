@@ -74,6 +74,18 @@ customView.showLoader()
 customView.hideLoader()
 ```
 
+Also the placeholder is now supporting in Objective-C language
+```Objective-C
+
+@import ListPlaceholder;
+
+//to show the loader
+[_customView showLoader];
+//to hide the loader
+[_customView hideLoader];
+```
+
+
 ## Example project
 
 Take a look at the example project over here
