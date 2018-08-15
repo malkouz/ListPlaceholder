@@ -31,12 +31,5 @@ This library allows you to easily add an FB style animated loading placeholder t
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'ListPlaceholder/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'ListPlaceholder' => ['ListPlaceholder/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
