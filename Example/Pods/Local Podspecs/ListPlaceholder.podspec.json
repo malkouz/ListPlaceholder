@@ -1,6 +1,6 @@
 {
   "name": "ListPlaceholder",
-  "version": "1.2",
+  "version": "1.3",
   "summary": "facebook news feed style animation on UITableView, UICollectionView, and custom views.",
   "description": "This library allows you to easily add an FB style animated loading placeholder to your tableviews, collection views, or custom views.",
   "homepage": "https://github.com/malkouz/ListPlaceholder",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/malkouz/ListPlaceholder.git",
-    "tag": "1.2"
+    "tag": "1.3"
   },
   "platforms": {
     "ios": "8.0"
