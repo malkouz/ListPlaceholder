@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ListPlaceholder'
-  s.version          = '1.2'
+  s.version          = '1.3'
   s.summary          = 'facebook news feed style animation on UITableView, UICollectionView, and custom views.'
 
 # This description is used to generate tags and improve search results.
@@ -32,11 +32,4 @@ This library allows you to easily add an FB style animated loading placeholder t
 
   s.source_files = 'ListPlaceholder/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'ListPlaceholder' => ['ListPlaceholder/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
