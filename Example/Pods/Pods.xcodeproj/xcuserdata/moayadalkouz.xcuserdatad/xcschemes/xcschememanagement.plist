@@ -4,10 +4,10 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ListPlaceholder.xcscheme_^#shared#^_</key>
+		<key>ListPlaceholder.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>Pods-Example.xcscheme</key>
 		<dict>

@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/MyGitHubProjects/ListPlaceholder/ListPlaceholder/.build/x86_64-apple-macosx10.10/debug/Classes.build/master.swiftdeps"
+  },
+  "/MyGitHubProjects/ListPlaceholder/ListPlaceholder/Classes/ListLoader.swift": {
+    "dependencies": "/MyGitHubProjects/ListPlaceholder/ListPlaceholder/.build/x86_64-apple-macosx10.10/debug/Classes.build/ListLoader.d",
+    "object": "/MyGitHubProjects/ListPlaceholder/ListPlaceholder/.build/x86_64-apple-macosx10.10/debug/Classes.build/ListLoader.swift.o",
+    "swiftmodule": "/MyGitHubProjects/ListPlaceholder/ListPlaceholder/.build/x86_64-apple-macosx10.10/debug/Classes.build/ListLoader~partial.swiftmodule",
+    "swift-dependencies": "/MyGitHubProjects/ListPlaceholder/ListPlaceholder/.build/x86_64-apple-macosx10.10/debug/Classes.build/ListLoader.swiftdeps"
+  }
+}
