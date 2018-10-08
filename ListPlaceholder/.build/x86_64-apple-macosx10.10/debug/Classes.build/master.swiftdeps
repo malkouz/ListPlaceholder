@@ -1,0 +1,5 @@
+version: "Apple Swift version 4.0.3 (swiftlang-900.0.74.1 clang-900.0.39.2)"
+options: "846b16b74bd95ba0753f3a037bc6f7a8"
+build_time: [1519639382, 951731000]
+inputs:
+  "/MyGitHubProjects/ListPlaceholder/ListPlaceholder/Classes/ListLoader.swift": !dirty [1516026473, 0]

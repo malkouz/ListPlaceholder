@@ -1,0 +1,30 @@
+client:
+  name: swift-build
+tools: {}
+targets:
+  "main": ["<Classes.module>"]
+  "test": ["<Classes.module>"]
+  "Classes.module": ["<Classes.module>"]
+default: "main"
+commands: 
+  "<C.Classes.module>":
+    tool: phony
+    inputs: ["/MyGitHubProjects/ListPlaceholder/ListPlaceholder/.build/x86_64-apple-macosx10.10/debug/Classes.swiftmodule"]
+    outputs: ["<Classes.module>"]
+
+  "C.Classes.module":
+    tool: swift-compiler
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "Classes"
+    module-output-path: "/MyGitHubProjects/ListPlaceholder/ListPlaceholder/.build/x86_64-apple-macosx10.10/debug/Classes.swiftmodule"
+    inputs: ["/MyGitHubProjects/ListPlaceholder/ListPlaceholder/Classes/ListLoader.swift"]
+    outputs: ["/MyGitHubProjects/ListPlaceholder/ListPlaceholder/.build/x86_64-apple-macosx10.10/debug/Classes.build/ListLoader.swift.o","/MyGitHubProjects/ListPlaceholder/ListPlaceholder/.build/x86_64-apple-macosx10.10/debug/Classes.swiftmodule"]
+    import-paths: ["/MyGitHubProjects/ListPlaceholder/ListPlaceholder/.build/x86_64-apple-macosx10.10/debug"]
+    temps-path: "/MyGitHubProjects/ListPlaceholder/ListPlaceholder/.build/x86_64-apple-macosx10.10/debug/Classes.build"
+    objects: ["/MyGitHubProjects/ListPlaceholder/ListPlaceholder/.build/x86_64-apple-macosx10.10/debug/Classes.build/ListLoader.swift.o"]
+    other-args: ["-swift-version","3","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Onone","-g","-enable-testing","-j8","-DSWIFT_PACKAGE","-module-cache-path","/MyGitHubProjects/ListPlaceholder/ListPlaceholder/.build/x86_64-apple-macosx10.10/debug/ModuleCache"]
+    sources: ["/MyGitHubProjects/ListPlaceholder/ListPlaceholder/Classes/ListLoader.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: "8"
+

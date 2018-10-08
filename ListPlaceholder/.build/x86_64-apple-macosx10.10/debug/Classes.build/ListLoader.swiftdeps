@@ -1,0 +1,136 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ListLoadable"
+- "ListLoader"
+- "CutoutView"
+- "cutoutHandle"
+- "gradientHandle"
+- "loaderDuration"
+- "gradientWidth"
+- "gradientFirstStop"
+provides-nominal:
+- "7Classes12ListLoadableP"
+- "7Classes10ListLoaderC"
+- "7Classes10CutoutViewC"
+provides-member:
+- ["7Classes12ListLoadableP", ""]
+- ["7Classes10ListLoaderC", ""]
+- ["7Classes10CutoutViewC", ""]
+provides-dynamic-lookup:
+- "addLoaderTo"
+- "layoutSubviews"
+- "removeLoaderFrom"
+depends-top-level:
+- !private "+"
+- !private "-"
+- "AssignmentPrecedence"
+- !private "CABasicAnimation"
+- "CAGradientLayer"
+- !private "CATransaction"
+- "CGFloat"
+- !private "CGPoint"
+- "CGRect"
+- "CastingPrecedence"
+- "CutoutView"
+- "Double"
+- !private "Float"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- "ListLoadable"
+- "ListLoader"
+- !private "NSLayoutConstraint"
+- !private "NSLayoutFormatOptions"
+- !private "NSNumber"
+- "NSObject"
+- "UICollectionView"
+- "UIColor"
+- !private "UIGraphicsGetCurrentContext"
+- "UITableView"
+- "UIView"
+- "UInt8"
+- "cutoutHandle"
+- "gradientFirstStop"
+- "gradientHandle"
+- "gradientWidth"
+- !private "kCAFillModeForwards"
+- "loaderDuration"
+depends-member:
+- !private ["s19BinaryFloatingPointP", "infinity"]
+- !private ["s7CVarArgP", "infinity"]
+- !private ["s10ComparableP", "infinity"]
+- !private ["s28CustomDebugStringConvertibleP", "infinity"]
+- !private ["s29CustomPlaygroundQuickLookableP", "infinity"]
+- !private ["s17CustomReflectableP", "infinity"]
+- !private ["s23CustomStringConvertibleP", "infinity"]
+- ["7Classes10CutoutViewC", "CGRect"]
+- !private ["7Classes10CutoutViewC", "UIColor"]
+- !private ["7Classes10CutoutViewC", "UIGraphicsGetCurrentContext"]
+- !private ["7Classes10CutoutViewC", "backgroundColor"]
+- !private ["7Classes10CutoutViewC", "boundInside"]
+- ["7Classes10CutoutViewC", "deinit"]
+- !private ["7Classes10CutoutViewC", "frame"]
+- ["7Classes10CutoutViewC", "init"]
+- ["7Classes10CutoutViewC", "layoutSubviews"]
+- !private ["7Classes10CutoutViewC", "setNeedsDisplay"]
+- !private ["7Classes10CutoutViewC", "superview"]
+- !private ["s9DecodableP", "infinity"]
+- !private ["s9EncodableP", "infinity"]
+- !private ["s9EquatableP", "infinity"]
+- !private ["s25ExpressibleByFloatLiteralP", "infinity"]
+- !private ["s27ExpressibleByIntegerLiteralP", "infinity"]
+- !private ["Sf", "infinity"]
+- !private ["s13FloatingPointP", "infinity"]
+- !private ["s8HashableP", "infinity"]
+- ["7Classes12ListLoadableP", "UIView"]
+- !private ["7Classes12ListLoadableP", "ld_visibleContentViews"]
+- !private ["7Classes10ListLoaderC", "CATransaction"]
+- ["7Classes10ListLoaderC", "ListLoadable"]
+- ["7Classes10ListLoaderC", "UIView"]
+- ["7Classes10ListLoaderC", "addLoaderTo"]
+- !private ["7Classes10ListLoaderC", "addLoaderToViews"]
+- ["7Classes10ListLoaderC", "deinit"]
+- ["7Classes10ListLoaderC", "init"]
+- ["7Classes10ListLoaderC", "removeLoaderFrom"]
+- !private ["7Classes10ListLoaderC", "removeLoaderFromViews"]
+- !private ["s25LosslessStringConvertibleP", "infinity"]
+- !private ["s7NumericP", "infinity"]
+- !private ["s13SignedNumericP", "infinity"]
+- !private ["s10StrideableP", "infinity"]
+- !private ["s15_CVarArgAlignedP", "infinity"]
+- !private ["s22_CVarArgPassedAsDoubleP", "infinity"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "infinity"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "infinity"]
+- !private ["s11_StrideableP", "infinity"]
+depends-nominal:
+- !private "s19BinaryFloatingPointP"
+- !private "s7CVarArgP"
+- !private "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- "7Classes10CutoutViewC"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- !private "s9EquatableP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "Sf"
+- !private "s13FloatingPointP"
+- !private "s8HashableP"
+- "7Classes12ListLoadableP"
+- "7Classes10ListLoaderC"
+- !private "s25LosslessStringConvertibleP"
+- !private "s7NumericP"
+- !private "s13SignedNumericP"
+- !private "s10StrideableP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s11_StrideableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "77f0009649c75ed42133789ce0320c16"
