@@ -228,7 +228,7 @@ var gradientFirstStop           = 0.1
         gradientAnimation.toValue = [NSNumber(value: 0 as Double),NSNumber(value: 1 as Double),NSNumber(value: 1 as Double),NSNumber(value: 1 + (gradientWidth - gradientFirstStop) as Double),NSNumber(value: 1 + gradientWidth as Double)]
         
         gradientAnimation.repeatCount = Float.infinity
-        gradientAnimation.fillMode = CAMediaTimingFillMode.forwards
+        gradientAnimation.fillMode = .forwards
         gradientAnimation.isRemovedOnCompletion = false
         gradientAnimation.duration = loaderDuration
         gradient.add(gradientAnimation ,forKey:"locations")
