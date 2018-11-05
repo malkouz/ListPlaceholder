@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'ListPlaceholder'
-    s.version          = '1.3'
+    s.version          = '1.4'
     s.summary          = 'facebook news feed style animation on UITableView, UICollectionView, and custom views.'
     s.xcconfig = { "OTHER_LDFLAGS" => "-lz" }
     # This description is used to generate tags and improve search results.
