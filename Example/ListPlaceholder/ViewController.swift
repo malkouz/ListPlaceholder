@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Hello Pull request")
+        print("Hello Pull request")
     }
     
     override func viewWillAppear(_ animated: Bool) {
