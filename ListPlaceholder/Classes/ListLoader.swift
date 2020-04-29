@@ -132,15 +132,25 @@ extension CGFloat
         context?.fill(self.bounds)
         
         for view in (self.superview?.subviews)! {
-            
             if view != self {
-                context?.setBlendMode(.clear);
-                let rect = view.frame
-                let clipPath: CGPath = UIBezierPath(roundedRect: rect, cornerRadius: view.layer.cornerRadius).cgPath
-                context?.addPath(clipPath)
-                context?.setFillColor(UIColor.clear.cgColor)
-                context?.closePath()
-                context?.fillPath()
+                let drawPath: (CGRect) -> Void = { frame in
+                    context?.setBlendMode(.clear);
+                    let rect = frame
+                    let clipPath: CGPath = UIBezierPath(roundedRect: rect, cornerRadius: view.layer.cornerRadius).cgPath
+                    context?.addPath(clipPath)
+                    context?.setFillColor(UIColor.clear.cgColor)
+                    context?.closePath()
+                    context?.fillPath()
+                }
+                
+                if #available(iOS 9.0, *), let stackView = view as? UIStackView {
+                    stackView.arrangedSubviews.forEach {subview in
+                        let frame = stackView.convert(subview.frame, to: view.superview!)
+                        drawPath(frame)
+                    }
+                } else {
+                    drawPath(view.frame)
+                }
             }
         }
     }
