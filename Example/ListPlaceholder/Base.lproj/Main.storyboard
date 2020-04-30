@@ -382,20 +382,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="44T-gJ-vVJ">
-                                <rect key="frame" x="37" y="68" width="301" height="80.5"/>
+                                <rect key="frame" x="-14.5" y="68" width="404" height="80.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="approved" translatesAutoresizingMaskIntoConstraints="NO" id="0lU-UW-gCA">
-                                        <rect key="frame" x="0.0" y="15.5" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="15.5" width="50.5" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="7sZ-xc-3JD"/>
                                             <constraint firstAttribute="width" constant="50" id="Sm1-sy-9ga"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hiw-Wr-XAd">
-                                        <rect key="frame" x="60" y="0.0" width="92.5" height="80.5"/>
+                                        <rect key="frame" x="60.5" y="0.0" width="92.5" height="80.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="approved" translatesAutoresizingMaskIntoConstraints="NO" id="gUT-qq-dei">
-                                                <rect key="frame" x="21.5" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="21" y="0.0" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="2Wv-RL-vID"/>
                                                     <constraint firstAttribute="width" constant="50" id="bZK-hU-vAq"/>
@@ -410,21 +410,45 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EYd-EG-7i5">
-                                        <rect key="frame" x="162.5" y="15.5" width="138.5" height="50"/>
+                                        <rect key="frame" x="163" y="0.0" width="241" height="80.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="approved" translatesAutoresizingMaskIntoConstraints="NO" id="Jbp-or-Ogm">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="0.0" y="15.5" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="oYf-yx-RxC"/>
                                                     <constraint firstAttribute="width" constant="50" id="rVU-bg-hNa"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Approving" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcL-ij-X9K">
-                                                <rect key="frame" x="60" y="14.5" width="78.5" height="20.5"/>
+                                                <rect key="frame" x="60" y="30" width="78.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="r1Q-zE-H7z">
+                                                <rect key="frame" x="148.5" y="0.0" width="92.5" height="80.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="approved" translatesAutoresizingMaskIntoConstraints="NO" id="TG3-ap-O6b">
+                                                        <rect key="frame" x="21" y="0.0" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="5sD-GU-y0b"/>
+                                                            <constraint firstAttribute="width" constant="50" id="6w9-Bn-47V"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Approving..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEC-9G-1Hz">
+                                                        <rect key="frame" x="0.0" y="60" width="92.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -468,6 +492,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="approved" width="150" height="150"/>
+        <image name="approved" width="512" height="512"/>
     </resources>
 </document>
