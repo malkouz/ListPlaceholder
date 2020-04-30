@@ -18,6 +18,7 @@
 		8848F1021F6FDE5B00A83549 /* MFlatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8848F1011F6FDE5B00A83549 /* MFlatView.swift */; };
 		8848F1041F6FF81100A83549 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8848F1031F6FF81100A83549 /* CollectionViewController.swift */; };
 		8857903E1F7A45EB00A0B817 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857903D1F7A45EB00A0B817 /* ViewController.swift */; };
+		BC848210245974730099C7C5 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC84820F245974730099C7C5 /* StackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8848F1031F6FF81100A83549 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		8857903D1F7A45EB00A0B817 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AD20C860D5B2082F229C3472 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BC84820F245974730099C7C5 /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		DA7C762FAF2C684E32067EB9 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E261DBDF07158F22DDE97A22 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +126,7 @@
 				8857903D1F7A45EB00A0B817 /* ViewController.swift */,
 				8848F1031F6FF81100A83549 /* CollectionViewController.swift */,
 				607FACD71AFB9204008FA782 /* TableViewController.swift */,
+				BC84820F245974730099C7C5 /* StackViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -335,6 +338,7 @@
 				8857903E1F7A45EB00A0B817 /* ViewController.swift in Sources */,
 				8848F1041F6FF81100A83549 /* CollectionViewController.swift in Sources */,
 				8848F1021F6FDE5B00A83549 /* MFlatView.swift in Sources */,
+				BC848210245974730099C7C5 /* StackViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* TableViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
