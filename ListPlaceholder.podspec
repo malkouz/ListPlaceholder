@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'ListPlaceholder'
-    s.version          = '1.4'
+    s.version          = '1.5'
     s.summary          = 'facebook news feed style animation on UITableView, UICollectionView, and custom views.'
     s.xcconfig = { "OTHER_LDFLAGS" => "-lz" }
     # This description is used to generate tags and improve search results.
@@ -31,12 +31,4 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '8.0'
     
     s.source_files = 'ListPlaceholder/Classes/**/*'
-    
-    # s.resource_bundles = {
-    #   'ListPlaceholder' => ['ListPlaceholder/Assets/*.png']
-    # }
-    
-    # s.public_header_files = 'Pod/Classes/**/*.h'
-    # s.frameworks = 'UIKit', 'MapKit'
-    # s.dependency 'AFNetworking', '~> 2.3'
 end
