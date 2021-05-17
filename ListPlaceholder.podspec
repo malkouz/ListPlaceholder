@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
     s.version          = '1.5'
     s.summary          = 'facebook news feed style animation on UITableView, UICollectionView, and custom views.'
     s.xcconfig = { "OTHER_LDFLAGS" => "-lz" }
+    s.swift_versions   = '5'
     # This description is used to generate tags and improve search results.
     #   * Think: What does it do? Why did you write it? What is the focus?
     #   * Try to keep it short, snappy and to the point.
