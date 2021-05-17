@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
     s.source           = { :git => 'https://github.com/malkouz/ListPlaceholder.git', :tag => s.version.to_s }
     # s.social_media_url = 'https://twitter.com/malkouz'
     
-    s.ios.deployment_target = '8.0'
+    s.ios.deployment_target = '10.0'
     
     s.source_files = 'ListPlaceholder/Classes/**/*'
 end
