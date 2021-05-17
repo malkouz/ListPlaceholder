@@ -9,6 +9,6 @@ let package = Package(
     dependencies: [
     ],
     targets: [
-        .target(name: "ListPlaceholder", dependencies: [], path: "Sources")
+        .target(name: "ListPlaceholder", dependencies: [], path: "ListPlaceholder/Classes")
     ]
 )
