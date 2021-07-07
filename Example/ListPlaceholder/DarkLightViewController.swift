@@ -21,6 +21,7 @@ class DarkLightViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white.onDarkMode(.red)
         stackView.showLoader()
     }
     

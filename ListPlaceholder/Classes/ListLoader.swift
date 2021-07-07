@@ -29,18 +29,17 @@ import UIKit
     public func showLoader(){
         var coverColor: UIColor?
         
-        if let backgroundColor = backgroundColor {
-            // cover image with current backgroundColor if its color is not clearColor
-            if backgroundColor != .clear {
-                coverColor = backgroundColor
-            }
-            
-            // loop throw parents and find backgroundColor
-            else if let color = superviewColor(view: self) {
-                coverColor = color
-            }
+        // cover image with current backgroundColor if its color is not clearColor
+        if let backgroundColor = backgroundColor, backgroundColor != .clear {
+            coverColor = backgroundColor
         }
         
+        // if not, loop throw parents and find backgroundColor
+        else if let color = superviewColor(view: self) {
+            coverColor = color
+        }
+        
+        // fall back to default
         if coverColor == nil {
             coverColor = defaultCoverColor
         }
@@ -76,12 +75,12 @@ import UIKit
     
     private func superviewColor(view: UIView) -> UIColor? {
         if let superview = view.superview {
-            if let color = superview.backgroundColor {
+            if let color = superview.backgroundColor, color != .clear {
                 return color
             }
             return superviewColor(view: superview)
         }
-        return view.backgroundColor
+        return view.backgroundColor == .clear ? nil: view.backgroundColor
     }
 }
 
