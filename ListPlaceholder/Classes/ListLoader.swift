@@ -27,13 +27,30 @@ import UIKit
 @objc extension UIView
 {
     public func showLoader(){
+        var coverColor: UIColor?
+        
+        // cover image with current backgroundColor if its color is not clearColor
+        if let backgroundColor = backgroundColor, backgroundColor != .clear {
+            coverColor = backgroundColor
+        }
+        
+        // if not, loop throw parents and find backgroundColor
+        else if let color = superviewColor(view: self) {
+            coverColor = color
+        }
+        
+        // fall back to default
+        if coverColor == nil {
+            coverColor = defaultCoverColor
+        }
+            
         self.isUserInteractionEnabled = false
         if self is UITableView{
-            ListLoader.addLoaderTo(self as! UITableView)
+            ListLoader.addLoaderTo(self as! UITableView, coverColor: coverColor!)
         }else if self is UICollectionView{
-            ListLoader.addLoaderTo(self as! UICollectionView)
+            ListLoader.addLoaderTo(self as! UICollectionView, coverColor: coverColor!)
         }else{
-            ListLoader.addLoaderToViews([self])
+            ListLoader.addLoaderToViews([self], coverColor: coverColor!)
         }
     }
     
@@ -46,6 +63,24 @@ import UIKit
         }else{
             ListLoader.removeLoaderFromViews([self])
         }
+    }
+    
+    private var defaultCoverColor: UIColor {
+        var coverColor: UIColor = .white
+        if #available(iOS 13.0, *) {
+            coverColor = coverColor.onDarkMode(.black)
+        }
+        return coverColor
+    }
+    
+    private func superviewColor(view: UIView) -> UIColor? {
+        if let superview = view.superview {
+            if let color = superview.backgroundColor, color != .clear {
+                return color
+            }
+            return superviewColor(view: superview)
+        }
+        return view.backgroundColor == .clear ? nil: view.backgroundColor
     }
 }
 
@@ -97,10 +132,10 @@ extension CGFloat
 
 @objc open class ListLoader: NSObject
 {
-    static func addLoaderToViews(_ views : [UIView])
+    static func addLoaderToViews(_ views : [UIView], coverColor: UIColor)
     {
         CATransaction.begin()
-        views.forEach { $0.ld_addLoader() }
+        views.forEach { $0.ld_addLoader(coverColor: coverColor) }
         CATransaction.commit()
     }
     
@@ -111,9 +146,9 @@ extension CGFloat
         CATransaction.commit()
     }
     
-    public static func addLoaderTo(_ list : ListLoadable )
+    public static func addLoaderTo(_ list : ListLoadable, coverColor: UIColor )
     {
-        self.addLoaderToViews(list.ld_visibleContentViews())
+        self.addLoaderToViews(list.ld_visibleContentViews(), coverColor: coverColor)
     }
     
     
@@ -125,10 +160,12 @@ extension CGFloat
 
 @objc class CutoutView : UIView
 {
+    var coverColor = UIColor.white
+    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         let context = UIGraphicsGetCurrentContext()
-        context?.setFillColor(UIColor.white.cgColor)
+        context?.setFillColor(coverColor.cgColor)
         context?.fill(self.bounds)
         
         for view in (self.superview?.subviews)! {
@@ -203,14 +240,14 @@ var gradientFirstStop           = 0.1
         return objc_setAssociatedObject(self, &gradientHandle, aLayer, .OBJC_ASSOCIATION_RETAIN)
     }
     
-    fileprivate func ld_addLoader()
+    fileprivate func ld_addLoader(coverColor: UIColor)
     {
         let gradient: CAGradientLayer = CAGradientLayer()
         gradient.frame = CGRect(x: 0, y: 0, width: self.bounds.size.width , height: self.bounds.size.height)
         self.layer.insertSublayer(gradient, at:0)
         
         self.configureAndAddAnimationToGradient(gradient)
-        self.addCutoutView()
+        self.addCutoutView(coverColor: coverColor)
     }
     
     fileprivate func ld_removeLoader()
@@ -257,10 +294,11 @@ var gradientFirstStop           = 0.1
         
     }
     
-    fileprivate func addCutoutView()
+    fileprivate func addCutoutView(coverColor: UIColor)
     {
         let cutout = CutoutView()
         cutout.frame = self.bounds
+        cutout.coverColor = coverColor
         cutout.backgroundColor = UIColor.clear
         
         self.addSubview(cutout)
@@ -278,3 +316,12 @@ var gradientFirstStop           = 0.1
     }
 }
 
+@available(iOS 13.0, *)
+private extension UIColor {
+    func onDarkMode(_ color: UIColor) -> UIColor {
+        let lightColor = self
+        return UIColor { trait in
+            trait.userInterfaceStyle == .dark ? color: lightColor
+        }
+    }
+}

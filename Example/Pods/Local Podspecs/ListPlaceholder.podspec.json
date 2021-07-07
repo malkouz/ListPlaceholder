@@ -5,6 +5,7 @@
   "xcconfig": {
     "OTHER_LDFLAGS": "-lz"
   },
+  "swift_versions": "5",
   "description": "This library allows you to easily add an FB style animated loading placeholder to your tableviews, collection views, or custom views.",
   "homepage": "https://github.com/malkouz/ListPlaceholder",
   "license": {
@@ -19,7 +20,8 @@
     "tag": "1.5"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
-  "source_files": "ListPlaceholder/Classes/**/*"
+  "source_files": "ListPlaceholder/Classes/**/*",
+  "swift_version": "5"
 }
