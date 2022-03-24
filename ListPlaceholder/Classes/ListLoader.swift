@@ -54,7 +54,7 @@ import UIKit
         }
     }
     
-    public func hideLoader(){
+    public func hideLoader() {
         self.isUserInteractionEnabled = true
         if self is UITableView{
             ListLoader.removeLoaderFrom(self as! UITableView)
@@ -86,7 +86,7 @@ import UIKit
 
 @objc extension UICollectionView : ListLoadable
 {
-    public func ld_visibleContentViews()->[UIView]
+    public func ld_visibleContentViews() -> [UIView]
     {
         return (self.visibleCells as NSArray).value(forKey: "contentView") as! [UIView]
     }
@@ -95,7 +95,7 @@ import UIKit
 
 
 @objc extension UIColor {
-    static func backgroundFadedGrey()->UIColor
+    static func backgroundFadedGrey() -> UIColor
     {
         return UIColor(red: (246.0/255.0), green: (247.0/255.0), blue: (248.0/255.0), alpha: 1)
     }
@@ -111,9 +111,8 @@ import UIKit
     }
 }
 
-@objc extension UIView{
+@objc extension UIView {
     func boundInside(_ superView: UIView){
-        
         self.translatesAutoresizingMaskIntoConstraints = false
         superView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|", options: NSLayoutConstraint.FormatOptions(), metrics:nil, views:["subview":self]))
         superView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[subview]-0-|", options: NSLayoutConstraint.FormatOptions(), metrics:nil, views:["subview":self]))
@@ -146,13 +145,13 @@ extension CGFloat
         CATransaction.commit()
     }
     
-    public static func addLoaderTo(_ list : ListLoadable, coverColor: UIColor )
+    public static func addLoaderTo(_ list : ListLoadable, coverColor: UIColor)
     {
         self.addLoaderToViews(list.ld_visibleContentViews(), coverColor: coverColor)
     }
     
     
-    public static func removeLoaderFrom(_ list : ListLoadable )
+    public static func removeLoaderFrom(_ list : ListLoadable)
     {
         self.removeLoaderFromViews(list.ld_visibleContentViews())
     }
@@ -220,7 +219,7 @@ var gradientFirstStop           = 0.1
 
 @objc extension UIView
 {
-    fileprivate func ld_getCutoutView()->UIView?
+    fileprivate func ld_getCutoutView() -> UIView?
     {
         return objc_getAssociatedObject(self, &cutoutHandle) as! UIView?
     }
@@ -230,7 +229,7 @@ var gradientFirstStop           = 0.1
         return objc_setAssociatedObject(self, &cutoutHandle, aView, .OBJC_ASSOCIATION_RETAIN)
     }
     
-    fileprivate func ld_getGradient()->CAGradientLayer?
+    fileprivate func ld_getGradient() -> CAGradientLayer?
     {
         return objc_getAssociatedObject(self, &gradientHandle) as! CAGradientLayer?
     }
